@@ -9,6 +9,6 @@ const devEnv = {
 
 const app = new App();
 
-new PipelineStack(app, 'PipelineStack', {env: devEnv})
+new PipelineStack(app, 'PipelineStack', { env: devEnv });
 
 app.synth();

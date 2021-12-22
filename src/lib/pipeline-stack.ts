@@ -11,7 +11,7 @@ export class WebAppStage extends Stage {
     constructor(scope: Construct, id: string, props?: StageProps) {
       super(scope, id, props);
   
-      const webAppStack = new WebAppStack(this, 'WebAppStack');
+      new WebAppStack(this, 'WebAppStack');
     }
   }
 
@@ -25,9 +25,9 @@ export class PipelineStack extends Stack {
                     connectionArn: 'arn:aws:codestar-connections:us-east-1:987092829714:connection/610326a5-0252-4e15-9b7e-af31f5b36201'
                 }),
             commands: [
-                'npm install',
-                'npm run build',
-                'npm synth'
+                'yarn',
+                'yarn build',
+                'yarn synth'
             ]
             })
         })

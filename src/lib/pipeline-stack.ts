@@ -25,7 +25,7 @@ export class PipelineStack extends Stack {
                     connectionArn: 'arn:aws:codestar-connections:us-east-1:987092829714:connection/610326a5-0252-4e15-9b7e-af31f5b36201'
                 }),
             commands: [
-                'yarn',
+                'yarn install',
                 'yarn build',
                 'yarn synth'
             ]

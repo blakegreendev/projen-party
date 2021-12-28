@@ -14,6 +14,10 @@
       "type": "build"
     },
     {
+      "name": "@types/react-dom",
+      "type": "build"
+    },
+    {
       "name": "@typescript-eslint/eslint-plugin",
       "version": "^5",
       "type": "build"
@@ -21,6 +25,10 @@
     {
       "name": "@typescript-eslint/parser",
       "version": "^5",
+      "type": "build"
+    },
+    {
+      "name": "@vitejs/plugin-react-refresh",
       "type": "build"
     },
     {
@@ -85,8 +93,20 @@
       "type": "build"
     },
     {
+      "name": "vite",
+      "type": "build"
+    },
+    {
       "name": "@aws-cdk/assert",
       "version": "^2.0.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-apigatewayv2-alpha",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-apigatewayv2-integrations-alpha",
       "type": "runtime"
     },
     {
@@ -105,6 +125,14 @@
     },
     {
       "name": "dynamodb-onetable",
+      "type": "runtime"
+    },
+    {
+      "name": "react",
+      "type": "runtime"
+    },
+    {
+      "name": "react-dom",
       "type": "runtime"
     }
   ],

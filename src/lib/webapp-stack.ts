@@ -1,13 +1,19 @@
-import { Stack, StackProps, aws_ec2 as ec2 } from 'aws-cdk-lib';
+import { Stack, StackProps, RemovalPolicy } from 'aws-cdk-lib';
+import { BillingMode, AttributeType, Table } from 'aws-cdk-lib/aws-dynamodb';
 import { Construct } from 'constructs';
 
 export class WebAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    new ec2.Vpc(this, 'Vpc', {
-      maxAzs: 2,
-      natGateways: 1,
-    });
+    const table = new Table(this, 'Table', {
+      partitionKey: { name: 'pk', type: AttributeType.STRING},
+      sortKey: { name: 'sk', type: AttributeType.STRING},
+      billingMode: BillingMode.PAY_PER_REQUEST,
+      removalPolicy: RemovalPolicy.DESTROY,
+      tableName: 'NotesTable'
+    })
+
+
   }
 }

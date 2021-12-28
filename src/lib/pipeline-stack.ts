@@ -1,6 +1,7 @@
 import { Stack, StackProps, Stage, StageProps, pipelines } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { WebAppStack } from './webapp-stack';
+import { DataStack } from './data-stack';
 
 const devEnv = {
   account: process.env.CDK_DEFAULT_ACCOUNT,
@@ -10,7 +11,6 @@ const devEnv = {
 export class WebAppStage extends Stage {
   constructor(scope: Construct, id: string, props?: StageProps) {
     super(scope, id, props);
-
     new WebAppStack(this, 'WebAppStack');
   }
 }

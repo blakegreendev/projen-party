@@ -6,7 +6,7 @@ export class WebAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const table = new Table(this, 'Table', {
+    new Table(this, 'Table', {
       partitionKey: { name: 'pk', type: AttributeType.STRING},
       sortKey: { name: 'sk', type: AttributeType.STRING},
       billingMode: BillingMode.PAY_PER_REQUEST,
